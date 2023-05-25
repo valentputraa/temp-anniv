@@ -1,0 +1,415 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Montserrat', sans-serif; 	
+	box-sizing: border-box;
+	/* border: 1px solid black; */
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.main {
+	max-height: 100vh;
+	background-color: white;
+}
+
+
+.container {
+	position: relative;
+
+}
+
+.mail-icon{
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	right: 2%;
+	bottom: 2%;
+	background-image: url('./assets/icons8-mail-100.png');
+	background-color: white;
+	border-radius: 24px;
+	background-size: cover;
+	animation: shakeIcon 2s linear infinite;
+	z-index: 10;
+	cursor: pointer;
+}
+
+@keyframes shakeIcon {
+	0% {
+	  transform: translateX(0);
+	}
+	20% {
+	  transform: translateX(-5px) rotate(-5deg);
+	}
+	40% {
+	  transform: translateX(5px) rotate(5deg);
+	}
+	60% {
+	  transform: translateX(-5px) rotate(-5deg);
+	}
+	80% {
+	  transform: translateX(5px) rotate(5deg);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+  }
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	font-size: 12px;
+	padding: 10px 10%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	font-weight: 600;
+	transition: all .3s ease;
+	background-color: white;
+	height: 60px;
+}
+
+
+
+.nav ul {
+	display: flex;
+	justify-content: center;
+  }
+nav ul li {
+	display: inline-block;
+	margin: 10px 20px;
+	cursor: pointer;
+	transition: all .2s;
+	color: rgb(0, 0, 0, 0.5);
+
+}
+nav a{
+	text-decoration: none;
+	list-style: none;
+	color: black;
+}
+
+nav a:visited{
+	color: black;
+}
+
+nav p {
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+nav ul li:hover {
+	color: rgb(0, 0, 0);
+}
+
+.img-wrapper{
+	display: flex;
+	justify-content: center;
+	
+}
+
+.img{
+	position: absolute;
+	height: 100vh;
+	width: 90%;
+	background-image: url('./assets/main.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: -1;
+}
+
+
+
+
+.countdown-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	gap: 28px;
+	color: rgb(255, 255, 255);
+	width: 100%;
+	height: 90vh;
+	z-index: 2;
+  }
+
+  .countdown-header {
+	text-align: center;
+	font-size: 36px;
+  }
+
+.countdown-item {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.countdown-item span {
+	display: block;
+	font-size: 18px;
+}
+
+.content-header{
+	margin-top: 90vh;
+	position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+background-image: url(./assets/1.JPG);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+
+.beginning-title{
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 32px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 45px;
+
+}
+
+.first-chat p{
+	font-weight: 600;
+}
+
+.line-wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.line{
+	width: 80%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.466);
+	margin-bottom: 20px;
+}
+
+.carousel{
+border-radius: 24px;
+}
+
+.carousel img{
+	height: 70vh;
+}
+
+.first-chat{
+	height: 420px;
+}
+
+.first-date{
+	text-align: right;
+	margin-top: 70px;
+}
+
+.content-date img{
+	margin-bottom: 20px;
+}
+
+.content-date img,
+	  .content-date iframe{
+		box-shadow: 7px 7px 0px 0px rgba(121,68,59,0.75);
+-webkit-box-shadow: 7px 7px 0px 0px rgba(121,68,59,0.75);
+-moz-box-shadow: 7px 7px 0px 0px #79443bbf;
+		border-radius: 24px;
+	  }
+
+
+
+.spotify-text{
+
+	display: flex;
+	text-align: left;
+	align-items: center;
+	height: 150px;
+	font-size: 26px;
+}
+
+.highlight-row{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	
+}
+
+
+.container{
+	padding: 3rem;
+}
+
+#imagesMain {
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	text-align: center;
+  }
+   .imagebox { 
+	   position: relative;
+		height: 350px;
+		width: 300px;
+		float: left; 
+		margin: 10px;                  
+   }
+  .imagebox img {
+		object-fit: cover;
+		height: 350px;
+		width: 300px;
+		-webkit-box-shadow: 0px 0px 54px -3px rgba(0,0,0,0.74);
+-moz-box-shadow: 0px 0px 54px -3px rgba(0,0,0,0.74);
+box-shadow: 0px 0px 54px -3px rgba(0,0,0,0.74);
+  }
+  .overlay{
+	  opacity:0;   
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  transition: .5s ease;
+	  background-color: rgba(0, 0, 0, 0.562);
+  }
+
+  .caption {
+	color: white;
+	font-size: 18px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
+  .imagebox:hover .overlay
+  { 
+	  opacity: 1;
+  }
+
+  footer{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	color: white;
+  }
+
+
+/* Kode CSS sebelumnya */
+
+
+  
+  @media (max-width: 768px) {
+	nav p {
+	  font-size: 16px;
+	  margin-top: 5px;
+	}
+	
+	nav ul li {
+	  margin: 5px 0;
+	}
+
+	.countdown-card p{
+		font-size: 24px;
+	}
+
+	.countdown-card span{
+		font-size: 13px;
+	}
+
+	.carousel img{
+		padding: 0px 20px;
+	}
+	
+	  .beginning-title {
+		font-size: 24px;
+	  }
+
+	  .line-wrapper{
+		margin-bottom: -40px;
+	  }
+	
+	  .first-chat h2{
+		margin-top: 20px;
+	  }
+	  
+	  .spotify-content{
+		padding: 20px;
+	  }
+
+	  .spotify-text{
+		font-size: 20px;
+		text-align: center;
+	  }
+	
+	
+	
+	 
+	
+	}
+
+  
+  
+
+
+  
+  
